@@ -1,0 +1,6 @@
+-- so... we're using a deprecated flyway property (init-on-migrate) to make flyway play nice with the fact that
+-- crunchy creates some tables for us when we spin up a new database
+--
+-- init-on-migrate has the odd side effect of making flyway ignore the V0001 migration.
+--
+-- tl;dr, this file is intentionally left blank
