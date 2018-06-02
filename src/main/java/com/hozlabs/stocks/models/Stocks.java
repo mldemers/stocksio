@@ -2,10 +2,7 @@ package com.hozlabs.stocks.models;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @Entity
@@ -25,4 +22,11 @@ public class Stocks {
     private String name;
 
     private double price;
+
+    @OneToMany(
+        cascade = CascadeType.ALL,
+        orphanRemoval = true
+    )
+    @OrderColumn
+    private History[] histories;
 }
