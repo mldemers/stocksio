@@ -1,6 +1,11 @@
 .gradle
 /build/
 !gradle/wrapper/gradle-wrapper.jar
+.eslintrc.yml
+node_modules/
+package-lock.json
+package.json
+yarn.lock
 
 ### STS ###
 .apt_generated
